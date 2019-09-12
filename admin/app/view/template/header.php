@@ -35,7 +35,7 @@
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="<?= BASE_URL.'app/function/logout' ?>" data-toggle="modal" data-target="#logoutModal">Logout</a>
+            <a class="dropdown-item" href="<?= BASE_URL . 'app/function/logout.php' ?>" data-toggle="modal" data-target="#logoutModal">Logout</a>
           </div>
         </li>
       </ul>

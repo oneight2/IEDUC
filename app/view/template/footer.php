@@ -61,7 +61,14 @@ Footer
   <!-- Uncomment below i you want to use a preloader -->
   <!-- <div id="preloader"></div> -->
   <!-- JavaScript Libraries -->
-  
+  <ul class="bodoamat">
+    <li>
+      <a href="https://api.whatsapp.com/send?phone=<?= $sosmed['no_wa'] ?>" target="_BLANK" class="whatsapp"><i class="fa fa-whatsapp fa-2x"></i></a>
+    </li>
+    <li>
+      <a href="<?= $sosmed['instagram'] ?>" target="_BLANK" class="instagram"><i class="fa fa-instagram fa-2x"></i></a>
+    </li>
+  </ul>
   <script src="<?= BASE_URL.'lib/jquery/jquery.min.js' ?>"></script>
   <script src="<?= BASE_URL.'lib/jquery/jquery-migrate.min.js' ?>"></script>
   <script src="<?= BASE_URL.'lib/bootstrap/js/bootstrap.bundle.min.js' ?>"></script>

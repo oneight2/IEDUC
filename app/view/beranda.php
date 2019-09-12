@@ -45,7 +45,7 @@ include_once 'app/module/beranda/list.php';
               </div>
               <div class="col-lg-2">
                 <div class="card">
-                  <a href="<?= BASE_URL.'' ?>">
+                  <a href="<?= BASE_URL.'programs' ?>">
                     <div class="card-body">
                       Our Programs
                     </div>
@@ -63,7 +63,7 @@ include_once 'app/module/beranda/list.php';
               </div>
               <div class="col-lg-2">
                 <div class="card">
-                  <a href="<?= BASE_URL.'' ?>">
+                  <a href="https://web.facebook.com/pg/ieduc.jerman/posts/" target="_blank">
                     <div class="card-body" style="font-size: 11pt">
                       IEDUC German
                     </div>

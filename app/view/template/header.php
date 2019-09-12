@@ -162,6 +162,32 @@ transition:all .5s;
     overflow: auto;
     height: 50vh;
 }
+.bodoamat {
+
+    position: fixed;
+    right: 0;
+    top: 29%;
+    z-index: 9998 !important;
+
+}
+.bodoamat li a.whatsapp {
+    background: #25d366;
+    transition: all .5s;
+}
+.bodoamat li a {
+    color: #fff;
+    display: block;
+    padding: 15px;
+    transition: all .5s;
+}
+.bodoamat li {
+    box-shadow: -5px -1px 5px rgba(25, 25, 25, .25);
+    list-style-type: none;
+}
+.bodoamat li a.instagram {
+    background: radial-gradient(circle at 17% -3%, rgba(74,98,216,1) 0%, rgba(147,50,189,1) 20%, rgba(147,50,189,-0.49) 49%, rgba(255,255,255,0.15) 74%, rgba(255,255,255,0) 100%), radial-gradient(circle at 21% 97%, rgba(254,213,111,1) 0%, rgba(254,213,111,1) 4%, rgba(251,159,47,1) 21%, rgba(241,78,69,1) 41%, rgba(217,40,149,1) 69%, rgba(208,40,149,1) 100%);
+    transition: all .5s;
+}
 @media(max-width: 576px) {
     #about, #contact, #testimonials{
     width: 100%;
@@ -170,6 +196,7 @@ transition:all .5s;
 }
 
     </style>
+    
   </head>
   <body>
  

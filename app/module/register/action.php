@@ -28,13 +28,14 @@ function register($data)
     $email = htmlspecialchars($data["email"]);
     $number = $data["number"];
     $programs = $data["programs"];
+    $tipe = $data['tipe']
     $address = addslashes($data["address"]);
     $tgl_daftar= date('Y-m-d');
 
     //query insert data
     $query = "INSERT INTO register
                 VALUES
-                ('','$name','$birthDate','$gender','$email','$number','$programs','$address','$tgl_daftar')";
+                ('','$name','$birthDate','$gender','$email','$number','$programs','$tipe','$address','$tgl_daftar')";
     mysqli_query($koneksi, $query);
     return mysqli_affected_rows($koneksi);
 }

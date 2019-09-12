@@ -19,8 +19,8 @@ include_once 'app/module/register/list.php';
                         <div class="form-group col-md-6">
                               <select name="gender" id="gender"class="form-control" required>
                                     <option value="" disable-select>Choose your gender</option>
-                                    <option value="laki-laki">Laki-laki</option>
-                                    <option value="Perempuan">Perempuan</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
                               </select>
                         </div>
                   </div>
@@ -40,6 +40,13 @@ include_once 'app/module/register/list.php';
                               <?php foreach ($programs as $row): ?>
                               <option value="<?= $row['judul']  ?>"><?= $row['judul']  ?></option>
                               <?php endforeach ?>
+                        </select>
+                  </div>
+                  <div class="form-group">
+                        <select name="tipe" id="program"class="form-control" required>
+                              <option value="" disable-select>Choose your type programs</option>
+                              <option value="Reguler">Reguler</option>
+                              <option value="Intensive">Intensive</option>
                         </select>
                   </div>
                   <div class="form-group">
