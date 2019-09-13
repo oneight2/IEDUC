@@ -1604,3 +1604,169 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 100%;
   height: auto;
 }
+        @keyframes bgcolor{
+    0%{
+        background: #F5C006;
+    }
+    20%{
+        background:#DF1638 ;
+    }
+    40%{
+        background:#07B307 ;
+    }
+    60%{
+        background:#1D05AC;
+    }
+    80%{
+        background:#0FC7A7;
+    }
+    100%{
+        background:#F5C006;
+    }
+}
+        /* Sidebar */
+.logo-sidenav{
+    width: 100%;
+    padding: 10% 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#sidebar-wrapper{
+  z-index:1;
+  position: absolute;
+  width:0;
+  height:100%;
+  overflow-y:hidden;
+  background:  black;
+    transition:all .5s;
+    display:flex;
+    align-items:center;
+}
+
+/* Main Content */
+#page-content-wrapper{
+  width: 100%;  
+  position: absolute;
+transition:all .5s;
+}
+
+#menu-toggle{
+    transition:all .3s;
+    font-size:2em;
+    padding: 0 12px;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    position: absolute;
+    border-radius: 0;
+    z-index: 9999;
+    color: black;
+
+}
+/* Change the width of the sidebar to display it*/
+#wrapper.menuDisplayed #sidebar-wrapper{
+  width:250px;
+}
+
+#wrapper.menuDisplayed #page-content-wrapper{
+  padding-left:250px;
+}
+
+/* Sidebar styling */
+.sidebar-nav{
+  padding:0;
+  list-style:none; 
+    transition:all .5s;
+    width:100%;
+    text-align:center;
+}
+
+.sidebar-nav li{
+  line-height:40px;  
+    width:100%;
+    transition:all .3s;
+    padding:10px;
+}
+
+.sidebar-nav li a {
+  display:block;
+  text-decoration:none;
+  color:#ddd;
+}
+.list-sidenav{
+  animation: bgcolor infinite 60s;
+
+}
+
+.sidebar-nav li:hover{
+  background:#252764;
+}
+#navdown{
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+#navdown .card{
+    background-color: black;
+    border-radius: 0;
+}
+#navdown .card a{
+    color: white;
+}
+#navdown .card:hover{
+    background-color: #252764;
+    color: white;
+}
+#navdown .col-2{
+    height: 100%;
+    border-left: 1px solid #858585;
+    border-right: 1px solid #858585;
+    padding: 1% 0;
+}
+#intro{
+    height: 90vh !important;
+}
+#intro .carousel-item{
+    height: 90vh !important;
+
+}
+#about, #contact, #testimonials{
+    width: 100%;
+    height: 90vh;
+}
+#about .overflow{
+    overflow: auto;
+    height: 50vh;
+}
+.bodoamat {
+
+    position: fixed;
+    right: 0;
+    top: 70%;
+    z-index: 9998 !important;
+
+}
+.bodoamat li a.whatsapp {
+    background: #25d366;
+    transition: all .5s;
+}
+.bodoamat li a {
+    color: #fff;
+    display: block;
+    padding: 15px;
+    transition: all .5s;
+}
+.bodoamat li {
+    box-shadow: -5px -1px 5px rgba(25, 25, 25, .25);
+    list-style-type: none;
+}
+.bodoamat li a.instagram {
+    background: radial-gradient(circle at 17% -3%, rgba(74,98,216,1) 0%, rgba(147,50,189,1) 20%, rgba(147,50,189,-0.49) 49%, rgba(255,255,255,0.15) 74%, rgba(255,255,255,0) 100%), radial-gradient(circle at 21% 97%, rgba(254,213,111,1) 0%, rgba(254,213,111,1) 4%, rgba(251,159,47,1) 21%, rgba(241,78,69,1) 41%, rgba(217,40,149,1) 69%, rgba(208,40,149,1) 100%);
+    transition: all .5s;
+}
+@media(max-width: 576px) {
+    #about, #contact, #testimonials{
+    width: 100%;
+    height: auto;
+    }
+}

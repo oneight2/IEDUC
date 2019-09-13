@@ -28,7 +28,7 @@ function register($data)
     $email = htmlspecialchars($data["email"]);
     $number = $data["number"];
     $programs = $data["programs"];
-    $tipe = $data['tipe']
+    $tipe = $data['tipe'];
     $address = addslashes($data["address"]);
     $tgl_daftar= date('Y-m-d');
 

@@ -8,7 +8,7 @@ include_once 'app/module/beranda/list.php';
       <img src="<?= BASE_URL.'img/logo.png' ?>" class="logo-sidenav">
       <li><a href="<?= BASE_URL ?>">Home</a></li>
       <li><a href="<?= BASE_URL.'gallery' ?>">Gallery</a></li>
-      <li class="list-sidenav"><a href="#">Register</a></li>
+      <li class="list-sidenav"><a href="<?= BASE_URL.'register' ?>">Register</a></li>
       <li ><a href="">Event</a></li>
     </ul>
   </div>
