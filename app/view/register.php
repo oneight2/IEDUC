@@ -31,9 +31,11 @@ include_once 'app/module/register/list.php';
                   </div>
                   <div class="form-row">
                         <div class="form-group col-md-6">
+                            <p style="font-size:11pt;color:black;margin-bottom:0">*Birth date</p>
                               <input type="date" class="form-control" name="birthDate" placeholder="Birth Date">
                         </div>
                         <div class="form-group col-md-6">
+                            <p style="font-size:11pt;color:white;margin-bottom:0">* </p>
                               <select name="gender" id="gender"class="form-control" required>
                                     <option value="" disable-select>Choose your gender</option>
                                     <option value="male">Male</option>

@@ -7,7 +7,7 @@ if (isset($_POST["register"])) {
         echo "
             <script>
             	alert('Success');
-                document.location.href='" . BASE_URL . "beranda';
+                document.location.href='" . BASE_URL . "';
             </script>
         ";
     }else {
