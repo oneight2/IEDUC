@@ -27,6 +27,10 @@
       $('.scroll-to-top').fadeOut();
     }
   });
+  // ajax register
+   $('.ModalRegister').on('click', function () {
+        $('.ajax').load('app/module/register/ajax.php/?id=' + $('.ModalRegister').val());
+    })
 
   // Smooth scrolling using jQuery easing
   $(document).on('click', 'a.scroll-to-top', function(event) {

@@ -29,7 +29,7 @@ include_once 'app/module/beranda/list.php';
       <div class="col-md-4 wow fadeInUp">
         <div class="about-col">
           <div class="img">
-            <img src="img/<?= $row['foto'] ?>" alt="" class="img-fluid">
+            <img src="img/programs/<?= $row['foto'] ?>" alt="" class="img-fluid" >
             <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
           </div>
           <h6 class="title p-2"><a href="#"><?= $row['judul'] ?></a></h6>

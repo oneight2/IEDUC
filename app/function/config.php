@@ -1,10 +1,10 @@
 <?php
-	define("BASE_URL", "http://ieducindonesia.com/");
+	define("BASE_URL", "http://localhost/ieduc/");
 	
 	$server = "localhost";
-	$username = "ieduacom_dbieduc";
-	$password = "p[3US8-k22";
-	$database = "ieduacom_dbieduc";
+	$username = "root";
+	$password = "";
+	$database = "db_ieduc";
 
 	$koneksi = mysqli_connect($server,$username,$password,$database) or die("koneksi ke database gagal");
 

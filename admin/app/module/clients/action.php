@@ -1,4 +1,7 @@
 <?php 
+ if (isset($url[2])) {
+     $foto=$url[2];
+ }
  if (isset($_POST["tambahClient"])) {
     if (tambahClient($_POST) > 0) {
         echo "
@@ -18,7 +21,9 @@ if (isset($url[1])) {
 }
 function hapusClient($id)
 {
-    global $koneksi;
+    global $koneksi,$foto;
+    $target ="../img/clients/$foto";
+    unlink($target);
     mysqli_query($koneksi, "DELETE FROM clients WHERE id=$id");
 
     return mysqli_affected_rows($koneksi);
@@ -38,41 +43,34 @@ function tambahClient($data)
 
 function uploadClients()
 {
-    $namaFile = $_FILES['gambar']['name'];
-    $ukuranFile = $_FILES['gambar']['size'];
-    $error = $_FILES['gambar']['error'];
-    $tmpName = $_FILES['gambar']['tmp_name'];
+    global $koneksi;
+    
+    $jumlah = count($_FILES['gambar']['name']);
+        if ($jumlah > 0) {
+            for ($i=0; $i < $jumlah; $i++) { 
+                $file_name = $_FILES['gambar']['name'][$i];
+                $tmp_name = $_FILES['gambar']['tmp_name'][$i];
+               
+                //validasi apakah yang di upload adalah gambar
+                $extensiGambarValid = ['jpg', 'jpeg', 'png'];
+                $extensiGambar = explode('.', $file_name);
+                $extensiGambar = strtolower(end($extensiGambar));
 
-    if ($error === 4) {
-        echo "<script>
-                alert('pilih gambar terlebih dahulu !!!');
-            </script>";
-        return false;
-    }
+                 if (!in_array($extensiGambar, $extensiGambarValid)) {
+                        echo "<script>
+                                alert('yang anda upload bukan gambar');
+                            </script>";
+                        return false;
+                    }
 
-    //validasi apakah yang di upload adalah gambar
-    $extensiGambarValid = ['jpg', 'jpeg', 'png'];
-    $extensiGambar = explode('.', $namaFile);
-    $extensiGambar = strtolower(end($extensiGambar));
+                $namaFileBaru = uniqid();
+                $namaFileBaru .= '.';
+                $namaFileBaru .= $extensiGambar;                         
+                move_uploaded_file($tmp_name, "../img/clients/".$namaFileBaru);
+                mysqli_query($koneksi,"INSERT INTO clients VALUES('','$namaFileBaru')");
+            }
+         
+        }
 
-    if (!in_array($extensiGambar, $extensiGambarValid)) {
-        echo "<script>
-                alert('yang anda upload bukan gambar');
-            </script>";
-        return false;
-    }
-
-    if ($ukuranFile > 10000000) {
-        echo "<script>
-                alert('gambar yang anda masukan terlalu besar');
-            </script>";
-        return false;
-    }
-
-    $namaFileBaru = uniqid();
-    $namaFileBaru .= '.';
-    $namaFileBaru .= $extensiGambar;
-
-    move_uploaded_file($tmpName, '../img/clients/' . $namaFileBaru);
-    return $namaFileBaru;
+    return mysqli_affected_rows($koneksi);
 }

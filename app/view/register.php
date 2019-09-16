@@ -73,7 +73,7 @@ include_once 'app/module/register/list.php';
                         <div class="validation"></div>
                   </div>
                   <div class="text-center">
-                        <button type="submit" name="register" class="btn-register">Register</button>
+                        <button type="submit" name="register" class="btn btn-lg btn-warning">Register</button>
                   </div>
             </form>
       </div>

@@ -16,18 +16,14 @@ function updateData($data)
     global $id;
     $judul = htmlspecialchars($data["judul"]);
     $deskripsi = addslashes($data["deskripsi"]);
-    // var_dump($_FILES['gambar']);
-    // die();
-   	if (isset($_FILES['gambar']['name'])) {
-   		if ($_FILES['gambar']['name'] == 0) {
-   			$query = "UPDATE program
-                SET judul='$judul', deskripsi='$deskripsi'  WHERE id_program=$id";
-   		}else{
+   	if (isset($_FILES)) {
    			$gambar = uploadFoto();
    			$query = "UPDATE program
                 SET judul='$judul', deskripsi='$deskripsi', foto='$gambar' WHERE id_program=$id";
-   		}
-   		
+   	}elseif(!isset($_FILES)){
+   			$query = "UPDATE program
+                SET judul='$judul', deskripsi='$deskripsi'  WHERE id_program=$id";
+            
    	} 
     mysqli_query($koneksi, $query);
     return mysqli_affected_rows($koneksi);

@@ -1,4 +1,5 @@
 <?php 
+ $foto = $url[2];
  if (isset($_POST["tambahData"])) {
     if (tambahData($_POST) > 0) {
         echo "
@@ -19,7 +20,9 @@ if (isset($url[1])) {
 }
 function hapusData($id)
 {
-    global $koneksi;
+    global $koneksi, $foto;
+    $target ="../img/gallery/$foto";
+    unlink($target);
     mysqli_query($koneksi, "DELETE FROM gallery WHERE id=$id");
 
     return mysqli_affected_rows($koneksi);
@@ -56,9 +59,4 @@ function tambahData($data)
         }
 
     return mysqli_affected_rows($koneksi);
-}
-
-function uploadData()
-{
-
 }

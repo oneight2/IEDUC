@@ -40,9 +40,9 @@ $no = 1;
             <td><?= $row['judul'] ?></td>
             <td style="max-width: 250px;"><?= $row['deskripsi'] ?></td>
            <td><img src="<?= BASE_URL.'../img/programs/'.$row['foto']?>" style="max-width: 100px" alt=""></td>
-            <td>
-              <a href="<?= BASE_URL.'editPrograms/'.$row['id_program'] ?>" class="btn btn-success" >Edit</a>
-              <a href="<?= BASE_URL.'programs/'.$row['id_program'] ?>" class="btn btn-danger" onclick="confirm('Yakin hapus?')">Hapus</a>
+            <td class="text-center">
+              <a href="<?= BASE_URL.'editPrograms/'.$row['id_program'] ?>" class="btn btn-primary" ><i class="fas fa-edit"></i></a>
+              <a href="<?= BASE_URL.'programs/'.$row['id_program'] ?>" class="btn btn-danger" onclick="confirm('Yakin hapus?')"><i class="fas fa-trash"></i></a>
             </td>
           </tr>
           <?php endforeach ?>

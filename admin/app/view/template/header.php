@@ -51,42 +51,47 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?= BASE_URL.'register' ?>">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-fw fa-user-circle"></i>
             <span>Rekap Data Register</span></a>
           </li>
           <li class="nav-item">
           <a class="nav-link" href="<?= BASE_URL.'carousel' ?>">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-fw fa-sliders-h"></i>
             <span>Carousel</span></a>
           </li>
           <li class="nav-item">
           <a class="nav-link" href="<?= BASE_URL.'gallery' ?>">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-fw fa-images"></i>
             <span>Gallery</span></a>
           </li>
           <li class="nav-item">
           <a class="nav-link" href="<?= BASE_URL.'profil' ?>">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-fw fa-address-card"></i>
             <span>Profil</span></a>
           </li>
           <li class="nav-item">
+          <a class="nav-link" href="<?= BASE_URL.'whyieduc' ?>">
+            <i class="fas fa-fw fa-question-circle"></i>
+            <span>Why IEDUC</span></a>
+          </li>
+          <li class="nav-item">
           <a class="nav-link" href="<?= BASE_URL.'programs' ?>">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-fw fa-intercom"></i>
             <span>Programs</span></a>
           </li>
           <li class="nav-item">
           <a class="nav-link" href="<?= BASE_URL.'clients' ?>">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-fw fa-users"></i>
             <span>Clients</span></a>
           </li>
           <li class="nav-item">
           <a class="nav-link" href="<?= BASE_URL.'sosial_media' ?>">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-fw fa-comment"></i>
             <span>Sosial Media</span></a>
           </li>
           <li class="nav-item">
           <a class="nav-link" href="<?= BASE_URL.'testimonials' ?>">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-fw fa-star"></i>
             <span>Testimonials</span></a>
           </li>
           </ul>

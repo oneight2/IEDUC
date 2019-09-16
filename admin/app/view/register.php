@@ -12,6 +12,7 @@ $no = 1;
     <i class="fas fa-table"></i>
   Rekap Data Register</div>
   <div class="card-body">
+    <a href="app/module/register/exportRegister.php" class="btn btn-md btn-success mb-4" target="_blank">EXPORT EXCEL</a>
     <div class="table-responsive">
       <!-- <a href="<?= BASE_URL.'exportRegister' ?>" target="_blank" class="btn btn-success" >Excel</a> -->
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -51,9 +52,9 @@ $no = 1;
             <td><?= $row['program'] ?></td>
             <td><?= $row['tgl_daftar'] ?></td>
             <td class="text-center">
-              <a class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal" href="<?= BASE_URL .'register/'.$row['id'] ?>">
+              <button class="btn btn-sm btn-primary ModalRegister" value="<?= $row['id'] ?>" data-target="#ModalRegister"  data-toggle="modal" >
               <i class="fa fa-eye"></i>
-              </a>
+              </button>
             </td>
           </tr>
           <?php endforeach ?>
@@ -63,7 +64,7 @@ $no = 1;
   </div>
 </div>
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="ModalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -72,15 +73,10 @@ $no = 1;
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-<?php if (isset($url[1])): ?>
-        ...
-<?php endif ?>
+      <div class="modal-body ajax">
+        <?= $id ?>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      
     </div>
   </div>
 </div>

@@ -37,7 +37,7 @@ $no = 1;
             <td><?= $no++ ?></td>
             <td><img src="<?= BASE_URL.'../img/carousel/'.$row['gambar'] ?>" alt="" style="max-width: 100px;"></td>
             <td>
-              <a href="<?= BASE_URL.'carousel/'.$row['id'] ?>" class="btn btn-danger" onclick="confirm('Yakin hapus?')">Hapus</a>
+              <a href="<?= BASE_URL.'carousel/'.$row['id'].'/'.$row['gambar'] ?>" class="btn btn-danger" onclick="confirm('Yakin hapus?')"><i class="fas fa-trash"></i></a>
             </td>
           </tr>
           <?php endforeach ?>
@@ -58,7 +58,7 @@ $no = 1;
       </div>
       <form action=""method="post" enctype="multipart/form-data">
         <div class="modal-body">
-            <input type="file" class="" id="" name="gambar" required>
+            <input type="file" class="" id="" name="gambar[]" required multiple>
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-primary" name="tambahData">Tambah</button>

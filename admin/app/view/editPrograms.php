@@ -16,7 +16,7 @@ $no = 1;
     <form action="" method="post" enctype="multipart/form-data">
       <div class="row">
         <div class="col-md-8">
-          <input type="file" class="mb-3"  name="gambar" value="<?= $view_programs['foto'] ?>">
+          <input type="file" class="mb-3 browser-default"   name="gambar" value="<?= $view_programs['foto'] ?>">
           <div class="form-group">
             <div class="form-label-group mb-3">
               <input type="text" class="form-control" id="judul" name="judul" value="<?= $view_programs['judul'] ?>">
