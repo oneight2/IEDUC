@@ -11,8 +11,12 @@
     <link href="<?= BASE_URL .'vendor/fontawesome-free/css/all.min.css' ?> " rel="stylesheet" type="text/css">
     <!-- Page level plugin CSS-->
     <link href="<?= BASE_URL. 'vendor/datatables/dataTables.bootstrap4.css' ?>" rel="stylesheet">
+
     <!-- Custom styles for this template-->
+    <link href="<?= BASE_URL. 'css/jquery.fileuploader.min.css' ?>" rel="stylesheet">
+    
     <link href="<?= BASE_URL. 'css/sb-admin.css' ?>" rel="stylesheet">
+    
   </head>
   <?php if (isset($_SESSION['status'])): ?>
   
@@ -93,6 +97,11 @@
           <a class="nav-link" href="<?= BASE_URL.'testimonials' ?>">
             <i class="fas fa-fw fa-star"></i>
             <span>Testimonials</span></a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="<?= BASE_URL . 'app/function/logout.php' ?>">
+            <i class="fas fa-fw fa-logout"></i>
+            <span>Logout</span></a>
           </li>
           </ul>
           <div id="content-wrapper">

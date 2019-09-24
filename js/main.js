@@ -81,17 +81,17 @@
   }
 
   // Header scroll class
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('#header').addClass('header-scrolled');
-    } else {
-      $('#header').removeClass('header-scrolled');
-    }
-  });
+  // $(window).scroll(function() {
+  //   if ($(this).scrollTop() > 100) {
+  //     $('#header').addClass('header-scrolled');
+  //   } else {
+  //     $('#header').removeClass('header-scrolled');
+  //   }
+  // });
 
-  if ($(window).scrollTop() > 100) {
-    $('#header').addClass('header-scrolled');
-  }
+  // if ($(window).scrollTop() > 100) {
+  //   $('#header').addClass('header-scrolled');
+  // }
 
   // Smooth scroll for the menu and links with .scrollto classes
   $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function() {

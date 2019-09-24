@@ -17,7 +17,9 @@
       e.preventDefault();
     }
   });
-
+$('.carousel').fileuploader({
+        addMore: true
+    });
   // Scroll to top button appear
   $(document).on('scroll', function() {
     var scrollDistance = $(this).scrollTop();

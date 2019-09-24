@@ -1,8 +1,8 @@
 <?php
 if(!isset($_SESSION['status'])){
-  header("Location: ".BASE_URL."login");
-  exit;
-  }
+header("Location: ".BASE_URL."login");
+exit;
+}
 include_once "app/module/carousel/list.php";
 include_once "app/module/carousel/action.php";
 $no = 1;
@@ -57,8 +57,8 @@ $no = 1;
         </button>
       </div>
       <form action=""method="post" enctype="multipart/form-data">
-        <div class="modal-body">
-            <input type="file" class="" id="" name="gambar[]" required multiple>
+        <div class="modal-body" style="color: white">
+          <input type="file" class="carousel"  name="gambar[]" required multiple>
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-primary" name="tambahData">Tambah</button>

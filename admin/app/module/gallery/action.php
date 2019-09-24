@@ -1,5 +1,7 @@
 <?php 
- $foto = $url[2];
+ if (isset($url[2])) {
+     $foto=$url[2];
+ }
  if (isset($_POST["tambahData"])) {
     if (tambahData($_POST) > 0) {
         echo "

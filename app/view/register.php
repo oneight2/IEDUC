@@ -13,7 +13,7 @@ include_once 'app/module/register/list.php';
           <ul class="nav-menu">
             <li class="menu-active"><a href="<?= BASE_URL ?>">Home</a></li>
             <li><a href="<?= BASE_URL.'gallery' ?>">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="<?= BASE_URL.'contact' ?>">Contact</a></li>
             <li  class="register"><a href="<?= BASE_URL .'register' ?>">Register</a></li>
           </ul>
           </nav>

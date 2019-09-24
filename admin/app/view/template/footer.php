@@ -59,12 +59,16 @@
   <script src="https://cdn.tiny.cloud/1/ac1m6b1gkx9140dql0hayq2qak92pzskqnl87qzihlx7985s/tinymce/5/tinymce.min.js"></script>
 
   <!-- Custom scripts for all pages-->
+  <script src="<?= BASE_URL.'js/jquery.fileuploader.min.js' ?>"></script>
+  
   <script src="<?= BASE_URL.'js/sb-admin.js' ?>"></script>
-
+  
+  
 
   <!-- Demo scripts for this page-->
   <script src="<?= BASE_URL.'js/demo/datatables-demo.js' ?>"></script>
   <script src="<?= BASE_URL.'js/demo/chart-area-demo.js' ?>"></script>
+
 
 </body>
 
